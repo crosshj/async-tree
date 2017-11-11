@@ -1,5 +1,5 @@
 # async-tree
-Depth first (ish) traversal of a tree of asynchcronus events.
+Depth first (ish) traversal of a tree of async events.
 
 # Example
 Call #1 returns a list of integers
