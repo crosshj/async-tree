@@ -1,6 +1,6 @@
 {
   "name": "async-tree",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "navigate a tree of async functions",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crosshj/utilities.git"
+    "url": "git+https://github.com/crosshj/async-tree.git"
   },
   "keywords": [
     "async",
@@ -17,9 +17,9 @@
   "author": "Harrison Cross <code@crosshj.com> (https://crosshj.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/crosshj/utilities/issues"
+    "url": "https://github.com/crosshj/async-tree/issues"
   },
-  "homepage": "https://github.com/crosshj/utilities/tree/master/async-tree",
+  "homepage": "https://github.com/crosshj/async-tree",
   "dependencies": {
     "async": "^2.0"
   }
