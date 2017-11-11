@@ -1,15 +1,15 @@
-# async-tree
+# async-tree   
 Make it possible to depth-first traverse an async tree of events.
 
 ### example
-Call #1 returns a list of integers
-Call #2 for each integer make another call which returns multiple integers for each integer
-Call #3 acts like Call #2 but uses integers got from each Call #2 response
+ - Call #1 returns a list of integers   
+ - Call #2 for each integer make another call which returns multiple integers for each integer    
+ - Call #3 acts like Call #2 but uses integers got from each Call #2 response   
 
 This could be accomplished using async waterfall, but all Call #2's must complete before all Call #3's and the same occurs for all Call #3's.
 With async-tree, a priority queue is created and results of each Call #2 is fed to Call #3 with priority on finishing each branch.
 
-The effect achieved is like async.waterfall, but traversal is handled in a more granular way.
+The effect achieved is like processing a tree using async.waterfall, but traversal is handled in a more granular way.
 
 ### usage
 ```
