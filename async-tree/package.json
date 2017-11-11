@@ -2,9 +2,9 @@
   "name": "async-tree",
   "version": "1.0.0",
   "description": "navigate a tree of async functions",
-  "main": "asyncTree.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node async-test"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/crosshj/utilities/issues"
   },
-  "homepage": "https://github.com/crosshj/utilities#readme"
+  "homepage": "https://github.com/crosshj/utilities#readme",
+  "dependencies": {
+    "async": "^2.0"
+  }
 }
