@@ -1,7 +1,7 @@
 # async-tree
 Depth first (ish) traversal of a tree of async events.
 
-# Example
+## Example
 Call #1 returns a list of integers
 Call #2 for each integer make another call which returns multiple integers for each integer
 Call #3 acts like Call #2 but uses integers got from each Call #2 response
