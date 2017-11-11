@@ -1,6 +1,6 @@
 {
   "name": "async-tree",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "navigate a tree of async functions",
   "main": "index.js",
   "scripts": {

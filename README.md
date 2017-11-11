@@ -6,10 +6,11 @@ Make it possible to depth-first traverse an async tree of events.
  - Call #2, for each integer make another call which returns another list of integers    
  - Call #3, acts like Call #2 but uses integers got from each Call #2 response   
 
-This could be accomplished using async waterfall, but all Call #2's must complete before all Call #3's and the same occurs for all Call #3's.
-With async-tree, a priority queue is created and results of each Call #2 is fed to Call #3 with priority on finishing each branch.
+This could be accomplished using async.waterfall, but all Call #2's must complete before all Call #3's and same for all Call #3's.  Also, wiring results at each level to the next is tedious and verbose.   
 
-The effect achieved is like processing a tree using async.waterfall, but traversal is handled in a more granular way.
+With async-tree, a priority queue is created and results of each Call #2 are fed to Call #3 with priority on finishing each branch.   
+
+The effect achieved is like processing a tree using async.waterfall, but traversal is handled in a more granular way and code is more terse and easier to test.
 
 ### usage
 ```
@@ -22,7 +23,6 @@ function getLevelOne(callback){
 
 function getLevelTwoItem(callback){
     var item = this.item;
-
     const results = new Array(item||1).fill().map(x => 2*item);
     setTimeout(function(){
         callback(null, results);
@@ -31,7 +31,6 @@ function getLevelTwoItem(callback){
 
 function getLevelThreeItem(callback){
     var item = this.item;
-    console.log('---- ',this.results);
     setTimeout(function(){
         const results = new Array(item/2||1).fill().map(x => 2*item);
         callback(null, results);
@@ -63,3 +62,7 @@ asyncTree({
 });
 
 ```
+
+### notes
+this.item is available in each function to track what arguments are passed to that function   
+this.results contains results from previous calls in branch   
